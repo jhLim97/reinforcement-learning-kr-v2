@@ -26,7 +26,8 @@ class ValueIteration:
 
             # 벨만 최적 방정식
             value_list = []
-            for action in self.env.possible_actions:
+            # 상, 하 ,좌, 우
+            for action in self.env.possible_actions: 
                 next_state = self.env.state_after_action(state, action)
                 reward = self.env.get_reward(state, action)
                 next_value = self.get_value(next_state)
